@@ -63,6 +63,8 @@ try {
         proxyAssets: !process.env.DONT_PROXY_ASSETS
     });
 
+    console.log("Config:", myNuts)
+
     //Control access to API
     myNuts.before('api', function (access, next) {
         if (!apiAuth.username) return next();
